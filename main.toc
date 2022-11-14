@@ -1,6 +1,0 @@
-\babel@toc {serbian}{}
-\contentsline {section}{\numberline {1}Uvod}{3}{}%
-\contentsline {section}{\numberline {2}Sluchajevi upotrebe}{3}{}%
-\contentsline {subsection}{\numberline {2.1}Sluchaj upotrebe: Dodavanje novog klijenta u sistem}{3}{}%
-\contentsline {subsection}{\numberline {2.2}Sluchaj upotrebe: Prijavljivanje kvara vozila}{3}{}%
-\contentsline {subsection}{\numberline {2.3}Sluchaj upotrebe: Naplata}{4}{}%
