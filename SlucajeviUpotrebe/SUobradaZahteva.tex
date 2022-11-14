@@ -1,1 +1,43 @@
-Ovo je neki tekst!
+
+Proces transporta pochinje kreiranjem zahteva od strane klijenta, koji definishe detalje o poshiljci. 
+
+
+\begin{enumerate}
+    \item \textbf{Kratak opis:} Korisnik shalje zahtev za transport popunjavanjem formulara u okviru sistema. Informacije o zahtevu se chuvaju u sistemu.
+    
+    \item \textbf{Uchesnici:} Korisnik
+    \item \textbf{Preduslovi:} Korisnik je registrovan u sistemu. Korisnik ima pristup internetu. Sistem je u funkciji.
+    \item \textbf{Postuslovi:} Zahtev za transport je poslat. Informacije o zahtevu su zabelezhene. Korisnik je primio potvrdu da je uspeshno poslao zahtev.
+    \item \textbf{Osnovni tok:}
+        \begin{enumerate}
+            \item[1.1.] Registrovani korisnik pristupa sistemu unoshenjem informacija o svom nalogu.
+            
+            \item[1.2.] Korisnik pristupa formularu za slanje zahteva za transport.
+            \item[1.3.] U okviru formulara popunjava informacije o poshiljci: koli\-chinu i adresu dostave. Dodatno, mozhe popuniti i polje sa napomenama vezanim za dostavu.
+            \item[1.4.] Korisnik potvrd1uje zahtev klikom na dugme.
+            
+            \item[1.5.] Sistem validira unete podatke.
+            \item[1.6.] Sistem chuva informacije o zahtevu.
+            \item[1.7.] Korisniku se prikazuje potvrda o uspeshnosti akcije.
+        \end{enumerate}
+    \item \textbf{Alternativni tokovi:}
+            \begin{enumerate}
+                \item [A1.] \textbf{Greshka prilikom validacije podataka: }
+                Ukoliko u koraku 1.5. korisnik unese pogreshne informacije, sistem obelezhava neispravna polja. 
+                Nakon shto korisnik ispravi greshku, proces se nastavlja u koraku 1.4.
+            \end{enumerate}
+        
+    \item \textbf{Podtokovi:} /
+    \item \textbf{Specijalni zahtevi:} /
+    \item \textbf{Dodatne informacije:} Greshke koje se mogu javiti prilikom popunjavanja formulara su: neispravna kolichina shec1era ili nevalidna adresa dostave.  
+    
+\end{enumerate}
+
+
+
+\begin{figure}[h!]
+    \includegraphics[scale=0.7]{Dijagrami/DSUzahtev.jpg}
+    \centering
+    \caption{Sluchaj upotrebe: Slanje zahteva za transport}
+    \label{dsuzahtev}
+\end{figure}    

@@ -10,7 +10,7 @@
 \usepackage{array}
 \usepackage{float}
 
-\title{Informacioni sistem za menad2ment transporta}
+\title{Informacioni sistem za menad2ment transporta shec1era na podruchju Republike Srbije}
 \author{Milica Gajic1, Marija Eric1, Milosh Kutleshic1}
 
 \begin{document}
@@ -24,7 +24,7 @@
 \newpage
 
 \section{Uvod}
-
+\subfile{uvod}
 \section{Sluchajevi upotrebe}
 \subsection{Sluchaj upotrebe: Dodavanje novog klijenta u sistem}
 
@@ -34,9 +34,12 @@
 \subsection{Sluchaj upotrebe: Naplata}
 \subfile{SlucajeviUpotrebe/SUnaplata}
 
-\include{SlucajeviUpotrebe/SUobradaZahteva}
+\subsection{Sluchaj upotrebe: Slanje zahteva za transport}
+\subfile{SlucajeviUpotrebe/SUobradaZahteva}
 
 \nocite{*}
+\fontencoding{T1}\selectfont
+
 \bibliography{literatura.bib}
 \bibliographystyle{plain}
 
