@@ -1,0 +1,80 @@
+
+
+Osnovni tipovi entiteta su Klijent i Zaposleni. Specijalizacijom su izvedeni tipovi entiteta Administrator, Vozach, Serviser. Tip entiteta zaposleni povezan je sa tipom entiteta Sektor preko stranog kljucha, a koji chuva podatke o ulogama zaposlenih i sektorima u kojima rade (administrator, vozach, serviser...). Tip entiteta Vozilo chuva podatke o vozilima. Tip entiteta Obrada prijave kvara nastao je agregacijom tipova entiteta Vozach i Vozilo i chuva podatke o prijavi kvara vozila. Tip entiteta Magacin chuva podatke o svim aktivnim magacinima klijenata i povezan je sa tipom entiteta Klijent preko stranog kljucha.
+
+Atributi tipa entiteta Klijent su:
+\begin{enumerate}
+    \item{matichni broj (PK, niz intid2era duz1ine 8)}
+    \item{pib (niz intid2era duz1ine 10)}
+    \item{naziv (niz karaktera duz1ine 255)}
+    \item{adresa (niz karaktera duz1ine 255)}
+    \item{poshtanski broj (intid2er)}
+    \item{broj aktivnih magacina (intid2er)}
+\end{enumerate}
+
+
+Atributi tipa entiteta Magacin su:
+\begin{enumerate}
+    \item{id (PK, intid2er)}
+    \item{matichni broj (SK, niz intid2era duz1ine 8)}
+    \item{adresa (niz karaktera duz1ine 255)}
+    \item{poshtanski broj (intid2er)}
+    \item{dostupna kolichina (intid2er)}
+    \item{kapacitet (intid2er)}
+\end{enumerate}
+
+Atributi tipa entiteta Zaposleni:
+\begin{enumerate}
+    \item {id zaposlenog (PK, intid2er)}
+    \item{JMBG (niz intid2era duz1ine 13)}
+    \item{ime (niz karaktera duz1ine 255)}
+    \item{prezime (niz karaktera duz1ine 255)}
+    \item{imejl adresa (niz karaktera duz1ine 255)}
+    \item{korisnichko ime (niz karaktera duz1ne 255)}
+    \item{lozinka (niz karaktera duz1ne 255)}
+    \item{id sektora (SK, intid2er)}
+    \item{nivo dozvola}
+\end{enumerate}
+
+Atributi tipa entiteta Vozach:
+\begin{enumerate}
+    \item {id zaposlenog (PK/SK, intid2er)}
+    \item{broj vozache dozvole (intid2er)}
+    \item{dostupnost (dostupan/zauzet)}
+    \item{poloz1ena kategorija (niz karaktera duz1ine 6)}
+    \item{datum lekarskog (datum)}
+    \item{datum isteka vozachke (datum)}
+\end{enumerate}
+
+Atributi tipa entiteta Sektor:
+\begin{enumerate}
+    \item {id sektora (PK, intid2er)}
+    \item{naziv (niz karaktera duz1ine 255)}
+\end{enumerate}
+
+Atributi tipa entiteta Vozilo:
+\begin{enumerate}
+    \item {broj registarskih tablica (PK, niz karaktera duz1ine 7)}
+    \item{datum registracije (datum)}
+    \item{dostupnost (zauzeto/slobodno/u kvaru)}
+    \item{marka (niz karaktera duz1ne 255)}
+    \item{model (niz karaktera duz1ine 255)}
+    \item{nosivost (intid2er)}
+\end{enumerate}
+
+Agregirani tip entiteta Obrada prijave kvara:
+\begin{enumerate}
+    \item {id zaposlenog (PK/SK, intid2er)}
+    \item{brojj registarskih tablica (PK/SK, niz karaktera duz1ne 7)}
+    \item{opis (niz karaktera duz1ine 255)}
+    \item{status (u kvaru/popravka/popravljeno)}
+\end{enumerate}
+
+
+
+% Број регистарских таблица	integer	10	true	false	false
+% Датум регистрације	integer	10	false	false	false
+% Доступност	integer	10	false	false	false
+% Марка	integer	10	false	false	false
+% Модел	integer	10	false	false	false
+% Носивост	integer	10	false	false	false
