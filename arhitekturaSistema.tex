@@ -1,0 +1,43 @@
+\subsection{Karakteristike sistema}
+Prilikom razmatranja arhitekture informacionog sistema cilj je bio napraviti jednostavnu, shiroko dostupnu, stabilnu i bezbednu aplikaciju. Izborom veb aplikacije obezbedili smo shiroku dostupnost jer je za njeno korish\c1enje potrebno samo da korisnik ima
+internet vezu na svom rachunaru. Pazhljivo vodec1i rachuna prilikom izrade korisnichkog
+interfejsa je postignuta jednostavnost a stabilnost i pre svega bezbednost izborom
+troslojne arhitekture gde se sredishnji (logichki) sloj deli na klijentski i serverski deo.
+Karakteristike arhitekture sistema za transport shec1era:
+\begin{enumerate}
+    \item  Tip aplikacije: Veb aplikacija
+    \item Strategije isporuchivanja: Jedan serverski i vishe klijent\-skih rachunara
+    \item Tehnologije: ???
+    \item Pratec1e komponente:
+
+    \begin{enumerate}
+        \item  Logovanje na sistem: Podsistem za autentikaciju korisnika
+        \item Pomoc1: Uput\-stvo za korish\-c1enje veb aplikacije, kontakt forma, $FAQ$
+        \item Pravljenje kopije baze podataka: Podsistem koji automatski ili na zahtev pravi kopiju baze podataka
+        \end{enumerate}
+
+\end{enumerate}
+
+\subsection{Tip i slojevi arhitekture}
+Arhitektura informacionog sistema je zamishljena kao klijent - server arhitektura i
+sastoji se iz tri sloja pri chemu se sredishnji sloj deli na dve komponente:
+\begin{itemize}
+    \item  Prezentacioni sloj
+\item Logichki sloj
+\begin{itemize}
+    \item Klijent kontroler
+    \item Server kontroler
+\end{itemize}
+
+\item Sloj podataka
+
+\end{itemize}
+
+\subsubsection{Komponente klijenta}
+\begin{enumerate}
+    \item \textbf{Prezentacioni sloj}
+    Predstavlja najvishi sloj aplikacije i ima ulogu da korisniku
+prikazhe vizuelnu reprezentaciju sadrzhaja na osnovu podataka koje dobija od nizheg
+sloja. Sastoji se od skupa $html$ stranica koje su izgrađene uz pomoc1 $HTML$, $CSS$, a njihov detaljan izgled c1e biti prikazan u narednom poglavlju. Pochetna stranica je $index.html$ na kojoj korisnik vrshi prijavu na sistem i ima moguc1nost naruchivanja ili otkazivanja transporta. 
+\end{enumerate}
+\subsubsection{Komponente servera}
