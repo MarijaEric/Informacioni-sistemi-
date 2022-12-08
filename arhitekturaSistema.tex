@@ -38,7 +38,24 @@ sastoji se iz tri sloja pri chemu se sredishnji sloj deli na dve komponente:
     \item \textbf{Prezentacioni sloj}
     Predstavlja najvishi sloj aplikacije i ima ulogu da korisniku
 prikazhe vizuelnu reprezentaciju sadrzhaja na osnovu podataka koje dobija od nizheg
-sloja. Sastoji se od skupa $html$ stranica koje su izgrađene uz pomoc1 $HTML$, $CSS$, a njihov detaljan izgled c1e biti prikazan u narednom poglavlju. Pochetna stranica je $index.html$ na kojoj korisnik vrshi prijavu na sistem i ima moguc1nost naruchivanja ili otkazivanja transporta. 
+sloja. Sastoji se od skupa $html$ stranica koje su izgrađene uz pomoc1 $HTML$, $CSS$, a njihov detaljan izgled c1e biti prikazan u narednom poglavlju. Pochetna stranica je $index.html$ na kojoj korisnik vrshi prijavu na sistem i ima moguc1nost naruchivanja ili otkazivanja transporta. \\
+\begin{itemize}
+\item{\textbf{Prijava korisnika/zaposlenih}
+Pristupom veb aplikaciji prikazuje se $index.html$ stranica tj, formular za prijavu korisnika/zaposlenog. Nakon unoshenja podataka i klika na dugme za prijavu, prikazuje se poruka o uspehu/neuspehu prijave korisnika aplikacije. Nakon uspeshne prijave, korisnik moz1e odabrati neku od ponudjenih kartica koje c1e omoguc1iti ostvarivanje nekih od funkcija sistema u zavisnosti od uloge korisnika u sistemu.}
+\item{\textbf{Slanje zahteva za transport}
+Korisnik moz1e naruchiti transport robe odabirom kartice Slanje zahteva za transport, pri chemu c1e biti prikazan formular za slanje zahteva. Popunjavanjem odgovarajuc1ih podataka i klikom na dugme za slanje zahteva korisniku c1e biti prikazana poruka o uspehu/neuspehu naruchivanja transporta.}
+\item{\textbf{Otkazivanje transporta}
+Slicno, odabirom kartice Otkazivanje transporta korisniku c1e biti omoguc1no da otkaz1e narucheni transport popunjavanjem formilara za otkazivanje transporta koji se u tom sluchaju prikazuje. Klikom na dugme za otkazivanje bic1e prikazana poruka o uspehu/neuspehu otkazivanja usluge.}
+\item{\textbf{Unos korisnika}
+Administrator sistema ima moguc1nost odabira kartice Unos/Izmena/Brisanje korisnika i na taj nachin moz1e menjati bazu podataka. Odabirom pomenutih kartica bic1e prikazan odgovarajuc1i formular. Popunjavanjem traz1enih podataka i klikom na dugme za potvrdu administratoru c1e biti prikazana poruka o uspehu/neuspehu izvrshene akcije.}
+\item{\textbf{Prijava kvara}
+Vozach moz1e odabrati karticu Prijava kvara. Slichno kao kod prethodnih korisnika aplikacije, bic1e prikazan formular chijim popunjavanjem i klikom na dugme za slanje prijave kvara vozach dobija poruku o uspehu/neuspehu izvrshene akcije.}
+
+\end{itemize}
+
+Administrator ima pristup svim relacijama baze podataka i moz1e ih chitati, menjati i brisati, dok ostali korisnici sistema imaju pristup odredjenim pogledima, o chemu je bilo rechi prilikom modelovanja baze sistema.
+ \item \textbf{Klijent kontroler}
+ Ova klijentska komponenta je zaduz1ena za prijem i verifikaciju podataka koje korisnici sistema unose, njihovo prosledjivanje serveru, kao i prijem i prosledjivanje podataka od strane servera prezentacionom sloju. 
 \end{enumerate}
 \subsubsection{Komponente servera}
 \begin{enumarate}
