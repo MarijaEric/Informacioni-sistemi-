@@ -1,0 +1,27 @@
+\babel@toc {serbian}{}
+\contentsline {section}{\numberline {1}Uvod}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Opis procesa transporta shec1era}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Uchesnici u sistemu}{3}{}%
+\contentsline {subsection}{\numberline {1.3}Korish\-c1eni dijagrami i alati}{4}{}%
+\contentsline {section}{\numberline {2}Sluchajevi upotrebe}{5}{}%
+\contentsline {subsection}{\numberline {2.1}Administrativni poslovi}{6}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Sluchaj upotrebe: Unoshenje novog klijenta u sistem}{6}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}Sluchaj upotrebe: Brisanje postojec1eg klijenta iz sistema}{7}{}%
+\contentsline {subsubsection}{\numberline {2.1.3}Sluchaj upotrebe: Az1uriranje postojec1eg klijenta u sistemu}{8}{}%
+\contentsline {subsection}{\numberline {2.2}Sluchaj upotrebe: Slanje zahteva za transport}{10}{}%
+\contentsline {subsection}{\numberline {2.3}Sluchaj upotrebe: Obrada zahteva za transport}{12}{}%
+\contentsline {subsection}{\numberline {2.4}Sluchaj upotrebe: Izmena zahteva za transport}{14}{}%
+\contentsline {subsection}{\numberline {2.5}Sluchaj upotrebe: Ponishtavanje zahteva za transport}{16}{}%
+\contentsline {subsection}{\numberline {2.6}Sluchaj upotrebe: Dostavljanje porud2bine}{18}{}%
+\contentsline {subsection}{\numberline {2.7}Sluchaj upotrebe: Zavrshna faza proud2bine}{23}{}%
+\contentsline {subsection}{\numberline {2.8}Odrzhavanje vozila}{25}{}%
+\contentsline {subsubsection}{\numberline {2.8.1}Sluchaj upotrebe: Prijavljivanje kvara vozila}{25}{}%
+\contentsline {subsubsection}{\numberline {2.8.2}Sluchaj upotrebe: Unoshenje novog vozila u sistem}{27}{}%
+\contentsline {subsubsection}{\numberline {2.8.3}Sluchaj upotrebe: Brisanje postojec1eg vozila iz sistema}{27}{}%
+\contentsline {subsubsection}{\numberline {2.8.4}Sluchaj upotrebe: Az1uriranje postojec1eg vozila u sistemu}{28}{}%
+\contentsline {section}{\numberline {3}Model baze podataka sistema}{31}{}%
+\contentsline {section}{\numberline {4}Predlog arhitekture sistema}{33}{}%
+\contentsline {subsection}{\numberline {4.1}Karakteristike sistema}{33}{}%
+\contentsline {subsection}{\numberline {4.2}Tip i slojevi arhitekture}{33}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}Komponente klijenta}{33}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Komponente servera}{34}{}%

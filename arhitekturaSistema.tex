@@ -7,7 +7,7 @@ Karakteristike arhitekture sistema za transport shec1era:
 \begin{enumerate}
     \item  Tip aplikacije: Veb aplikacija
     \item Strategije isporuchivanja: Jedan serverski i vishe klijent\-skih rachunara
-    \item Tehnologije: ???
+    \item Tehnologije: $PHP$, $HTML$, $Javascript$
     \item Pratec1e komponente:
 
     \begin{enumerate}
@@ -41,3 +41,26 @@ prikazhe vizuelnu reprezentaciju sadrzhaja na osnovu podataka koje dobija od niz
 sloja. Sastoji se od skupa $html$ stranica koje su izgrađene uz pomoc1 $HTML$, $CSS$, a njihov detaljan izgled c1e biti prikazan u narednom poglavlju. Pochetna stranica je $index.html$ na kojoj korisnik vrshi prijavu na sistem i ima moguc1nost naruchivanja ili otkazivanja transporta. 
 \end{enumerate}
 \subsubsection{Komponente servera}
+\begin{enumarate}
+	\item {\textbf{Kontrolerski sloj}
+			Predstavlja logicki sloj servera i ima ulogu u primanju zahteva koje klijent sloj shalje kao i odgovaranje na iste. U okviru ovog sloja nalazi se i biznis logika celog sistema.  Implementacija ovog sloja je izvrshena pravljenjem otvorenog $API$-ja (\fontencoding{T1} \selectfont Application programming interface \fontencoding{OT2} \selectfont ) ka korisnichkom sloju sa upotrebom $RESTFul$ konvencije. Realizacija implementacije saderzhac1e $PHP$ skripte koje c1e u odnosu na zahtev dobijen od strane klijentske strane obrad1ivati dobijene podatke i stupati u kontakt sa slojem podataka kada to bude potrebno. Za implementaciju koristicemo \fontencoding{T1} \selectfont Controller-Service-Repository\fontencoding{OT2} \selectfont  model.  Komponente koje c1e biti raspolozhive sistemu su:
+			\begin{itemize}
+				\item {\textbf{Kontroler za Autentikaciju(Autorizaciju)} \\
+						Ovaj kontroler prima sve vrste zahteva po pitanju logovanja. Klijenska strana c1e kroz razlichite forme omoguc1iti korisniku ovog sistema da svoje podatke za logovanje prosledi ovom kontroleru (korish\-c1enjem $API$-ja) . Nakon chega se iz skupa moguc1ih lokacija korisnik prosled1uje u zavisnosti od njegovih privilegija pristupa.}
+				\item{\textbf{Servis za autentikaciju}\\
+				Biznis logika iza celog procesa autentikacije. Nakon odred1enih autentikacija vrac1a informaciju kontroleru o tome koja su prava pristupa klijenta, i da li ih uopshte i ima, naravno.}
+				\item{\textbf{Kontroler za narudzbine}\\
+					To je kontroler koji je zaduzhen za primanje zahteva vezanih za narud2bine kao i za validaciju istih.  Ovaj kontroler c1e biti povezan sa servisom za rute, kao i sa servisom sa narudzbine. }
+				\item{\textbf{Servis za narud2bine} \\
+					U njemu se nalazi sva biznis logika obrade, validacije i potvrde narudzbina i u komunikaciji je sa repozitorijumom za upravljanje podataka}
+				\item{\textbf{Servis za transport} \\
+					Servis u kome se nalazi sva bizinis logika vezana za transport i rutem, npr logika biranja ruta}
+				\item{\textbf{Repozitorijum za upravljanje podacima}
+					S obzirom na malu kolichinu podataka kojima raspolazhemo, dovoljno je da imamo samo jedan repozitorijum koji je na najnizhem sloju nashe aplikacije povezan sa bazom podataka iz koje izvlachi potrebne podatke kao i azhurira postojec1e }
+			\end{itemize} \\
+		Kontroleri koji se nalaze u nashem sistemu bic1e zhargonski recheno gad1ani od strane klijentske strane po rutama koje c1e ti kontroleri definisati, usled razlichitih privilegija koje korisnici sistema mogu imati, nece sve rute kontrolera biti dostupne svima.  Kontroleri ni u jednom trenutnku nec1e biti direktno u komunikaciji sa repozitorijumom, a naravno ni sa bazom podataka. Kontroleri nasheg sistema c1e nakon prosled1ivanja podatka i zadataka servisima, nakon izvrshenih radnji i odgova istih, nazad klijentkoj strani slati informaciju o tome da li je akcija bila uspeshna i shta je rezultat trazhene akcije.
+	}
+	\item{\textbf{Sloj podataka} \\
+		Tabele koje c1e se nalaziti u ovoj bazi podataka opisane su dijagramom klasa. Podaci c1e biti skladishteni u memoriji na serverskom rachunaru, i to u $Postgres$ bazi podataka. Jedini nachin pristupa bazi podataka bic1e preko repozitorijuma koji je ujedno i najnizhi nashe aplikacije, dok c1e repozitorijum biti povezan sa bazom podataka preko odred1enih komponenti okruzhenja ($Framework$), jedno takvo okruzhenje za $PHP$ bi bio $Laravel$ koji nudi jednostavno povezivanje . 
+		}
+\end{enumerate}
