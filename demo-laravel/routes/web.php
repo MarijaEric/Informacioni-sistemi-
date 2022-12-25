@@ -15,13 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect('/home');
+
 });
+
+#pravi defaultne rute /login /register
+Auth::routes();
+
+#redirekcija /register na /login
 Route::get("/register", function () {
     return redirect('/login');
 });
 
 
-Auth::routes();
+
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
