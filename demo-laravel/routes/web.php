@@ -25,6 +25,8 @@ Auth::routes();
 Route::get("/register", function () {
     return redirect('/login');
 });
+//
+Route::get("/check-user", "App\\Http\\Controllers\\CheckController@check")->name("checker");
 
 
 
@@ -41,5 +43,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('tables', ['as' => 'pages.tables', 'uses' => 'App\Http\Controllers\PageController@tables']);
     Route::get('typography', ['as' => 'pages.typography', 'uses' => 'App\Http\Controllers\PageController@typography']);
     Route::get('upgrade', ['as' => 'pages.upgrade', 'uses' => 'App\Http\Controllers\PageController@upgrade']);
+    Route::get('/klijent', "App\\Http\\Controllers\\HomeController@client")->name('client-home');
+    Route::get('/aktivne-narudzbine', "App\\Http\\Controllers\\HomeController@clientOrder")->name('client-order');
+    Route::get('/istorija-porudzbina', "App\\Http\\Controllers\\HomeController@clientHistory")->name('client-history');
+    Route::get('/naruci', "App\\Http\\Controllers\\HomeController@clientPlaceOrder")->name('client-place-order');
+    Route::post('/slanje-narudzbine', "App\\Http\\Controllers\\OrderController@order")->name('order');
+    Route::post('/otkazivanje-narudzbine', "App\\Http\\Controllers\\OrderController@cancel")->name('cancel');
+    Route::get('/random', "App\\Http\\Controllers\\HomeController@random")->name('random');
 });
 
