@@ -1,0 +1,60 @@
+
+Godishnje se u Srbiji proizvede oko 700 000 tona shec1era, od chega su potebe na domac1em trzhishtu oko 200 000 tona godishnje \cite{sugar2019}. Procena vrednosti trzhishta proizvodnje shec1era u Srbiji 2019. godine je iznosila 45.65 miliona americhkih dolara ($USD$). 
+
+U lancu nabavke shec1era, transport predstavlja najskuplju komponentu \cite{anokic2021metaheuristic}. 
+
+Iz tog razloga je neophodno da proces transporta bude izvrshen u shto krac1em roku, po shto manjoj ceni.
+
+U okviru rada je predlozhen informacioni sistem za menad2ment transporta shec1era od fabrike do klijenta. Fokus c1e biti na transportu na teritoriji Republike Srbije.
+
+Predlog informacionog sistema je izrad1en kao projekat u okviru predmeta "Informacioni sistemi", koji se odrzhava na master studijama Matematichkog fakulteta.
+
+Potrebno je naglasiti, da zbog kompleksnosti procesa transporta, broja chlanova tima, kao i ogranichenog vremenskog roka za izradu projekta, predlog informacionog sistema sadrzhi osnovne elemente potrebne za funkcionisanje transportnog preduzec1a. Na kraju rada, u okviru \hyperref[zaklj]{zakljuchka}, su navedeni predlozi za dalji razvoj sistema.
+
+
+\subsection{Opis procesa transporta shec1era}
+
+Informacioni sistem se razvija za transportno preduzec1e. Transport se vrshi od fabrike shec1era do magacina klijenta, po narud2bini.
+Narud2bine se vrshe na veliko i klijenti su razlichiti prehrambeni proizvod1achi. Proces transporta obuhvata utovar i dostavu. Klijent je zaduzhen za istovar.
+Neophodno je organizovati transport sa shto vec1om ushtedom novca i vremena.
+
+Kamioni za transport se nalaze u krugu fabrike, koja ujedno predstavlja pochetnu i krajnju tachku svakog putovanja. Dakle, pri svakom putovanju, jedno vozilo opsluzhuje jednog klijenta i vrac1a se u fabriku. 
+
+
+\subsection{Uchesnici u sistemu}
+
+Osnovna podela uchesnika u sistemu je na zaposlene i klijente. Jedino registrovani klijenti imaju pristup sistemu i moguc1nost zahtevanja transporta. 
+
+Kategorije zaposlenog osoblja neophodnog za proces transporta:
+\begin{itemize}
+    \item Administratori - zaduzheni za odrzhavanje rada sistema, kao i za registrovanje novih korisnika (sa kojima je potpisan ugovor o transportu).
+    \item Logistichari - zaposleni sa domenskim znanjem, zaduzheni za proces obrade zahteva, formiranje cena i ostalih zadataka vezanih za planiranje.
+    \item Vozachi - zaduzheni za prevoz robe.
+    \item Magacioneri - zaduzheni za proces utovara.
+    \item Najamnici - zaduzheni za utovar. Neophodni za izvrshavanje procesa transporta, ali nisu modelovani u sistemu, poshto sve potrebne informacije dobijaju od magacionera.  
+    \item Serviseri - zaduzheni za odrz1avanje vozila.
+    
+Svaka kategorija mozhe imati jednu ili vishe osoba koje rade isti posao, ukoliko je to potrebno.
+
+\end{itemize}
+
+\subsection{Korish\-c1eni dijagrami i alati}
+Tokom izrade rada, korish\-c1eni su dijagrami:
+\begin{itemize}
+    \item UML dijagrami:
+    \begin{enumerate}
+     \item Dijagram sluchajeva upotrebe
+    \item Dijagram aktivnosti
+    \item Dijagram sekvenci
+    \end{enumerate}
+    \item BPMN dijagrami ($Business$ $Process$ $Modeling$ $Notation$ $Diagram$)
+    \item ER dijagram ($Entity$ $relation$ $diagram$)
+    \item Dijagrami za prikaz arhitekture sistema
+    \item Skice korisnichkog interfejsa
+    
+\end{itemize}
+
+Za izradu svih UML dijagrama, kao i ER i BPMN dijagrama korish\-c1en je alat \fontencoding{T1}\selectfont
+\textit{Visual Paradigm - Online/Community Edition.}
+\fontencoding{OT2}\selectfont
+Za izradu skica korisnichkog interfejsa je korish\-c1en alat $Diagrams.net$.

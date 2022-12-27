@@ -3,9 +3,9 @@
 \subsection{Opis modela}
 Osnovni tipovi entiteta su Klijent i Zaposleni. Specijalizacijom su izvedeni tipovi entiteta Administrator, Vozach, Serviser. Tip entiteta zaposleni povezan je sa tipom entiteta Sektor preko stranog kljucha, a koji chuva podatke o ulogama zaposlenih i sektorima u kojima rade (administrator, vozach, serviser...). Tip entiteta Vozilo chuva podatke o vozilima. Tip entiteta Obrada prijave kvara nastao je agregacijom tipova entiteta Vozach i Vozilo i chuva podatke o prijavi kvara vozila. Tip entiteta Magacin chuva podatke o svim aktivnim magacinima klijenata i povezan je sa tipom entiteta Klijent preko stranog kljucha.
 
+Poshto je za pravilno funkcionisanje sistema potrebno isposhtovati integritet podataka, predlog je da se koristi relaciona baza podataka.
 
-
-Na slici \ref{fig:er} se nalazi detaljan konceptualan model baze podataka. Dok se u nastavku teksta mozhe nac1i dodatne informacije o entitetima.
+Na slici \ref{fig:er} se nalazi detaljan logichki model baze podataka. Dakle, dodate su i informacije o kljuchevima, kao i tipovima atributa. 
 
 \begin{figure}[H]
     \centering
@@ -16,6 +16,9 @@ Na slici \ref{fig:er} se nalazi detaljan konceptualan model baze podataka. Dok s
 \newpage
 \begin{itemize}
     \item 
+
+
+
 Atributi tipa entiteta Klijent su:
 \begin{enumerate}
     \item{matichni broj (PK, niz intid2era duz1ine 8)}
