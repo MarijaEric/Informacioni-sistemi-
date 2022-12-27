@@ -11,8 +11,7 @@ Odrz1avanje vozila je sluchaj upotrebe u kom serviser formira bazu podataka vozi
 \begin{itemize}
 \item{\textbf{Kratak opis:} Vozach prijavljuje kvar vozila na putu popunjavanjem formulara u okviru sistema. Serviser obradjuje prijavu kvara i shalje povratnu informaciju vozachu preko sitema.}
 \item{\textbf{Akteri:} Vozach i serviser}
-\item{\textbf{Ulaz:} Podaci o vozilu, prirodi kvara i trenutnoj lokaciji vozacha, podaci o organizaciji popravke kvara }
-\item{\textbf{Izlaz:} Poruka o obradi prijave kvara }
+
 \item{\textbf{Preduslovi:} Vozach ima pristup sistemu preko interneta. Serviser ima pristup sistemu. }
 \item{\textbf{Postuslovi:} Uspeshno prijavljen kvar.}
 \item{\textbf{Glavni tok:} 
@@ -47,8 +46,7 @@ Odrz1avanje vozila je sluchaj upotrebe u kom serviser formira bazu podataka vozi
 \begin{itemize}
 \item{\textbf{Kratak opis:} Serviser unosi informacije o vozilu koje u trenutku unosa ne postoji u sistemu. Sistem obradjuje informacije, az1urira se stanje sistema i vrac1a povratna informacija o uspeshnosti unosa.}
 \item{\textbf{Akteri:} Serviser}
-\item{\textbf{Ulaz:} Podaci o vozilu }
-\item{\textbf{Izlaz:} Poruka o uspeshnosti unoshenja vozila u sistem }
+
 \item{\textbf{Preduslovi:} Serviser ima pristup sistemu i poseduje potrebne informacije o novom vozilu. }
 \item{\textbf{Postuslovi:} Uspeshno dodato vozilo u sistem.}
 \item{\textbf{Glavni tok:} 
@@ -75,8 +73,7 @@ Odrz1avanje vozila je sluchaj upotrebe u kom serviser formira bazu podataka vozi
 \begin{itemize}
 \item{\textbf{Kratak opis:} Serviser brishe postojec1e vozilo iz sistema. Az1urira se stanje sistema i vrac1a povratna informacija o uspeshnosti akcije.}
 \item{\textbf{Akteri:} Serviser}
-\item{\textbf{Ulaz:} Podaci o vozilu za pretragu }
-\item{\textbf{Izlaz:} Poruka o uspeshnosti brisanja vozila iz sistema }
+
 \item{\textbf{Preduslovi:} Serviser ima pristup sistemu i poseduje potrebne informacije o vozilu. Postoje informacije o vozilu u sistemu.}
 \item{\textbf{Postuslovi:} Uspeshno obrisano vozilo iz sistema.}
 \item{\textbf{Glavni tok:} 
