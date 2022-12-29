@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect('/home');
+    return redirect("/klijenti");
 
 });
 
@@ -28,11 +28,17 @@ Route::get("/register", function () {
 
 
 
-Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
     Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
     Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
+
+
+    Route::get('klijenti-novi', ['as' => 'klijenti-novi.dodaj', 'uses' => 'App\Http\Controllers\KlijentiController@dodaj']);
+    Route::put('klijenti-novi', ['as' => 'klijenti-novi.novi', 'uses' => 'App\Http\Controllers\KlijentiController@napraviNovog']);
+    Route::get('klijenti',  'App\Http\Controllers\KlijentiController@pocetna')->name("home");
+    Route::post('brisanje-klijenta', "App\\Http\\Controllers\\KlijentiController@cancel")->name('cancelClients');
+
     Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
     Route::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);
     Route::get('maps', ['as' => 'pages.maps', 'uses' => 'App\Http\Controllers\PageController@maps']);

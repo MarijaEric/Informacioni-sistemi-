@@ -23,9 +23,6 @@ return new class extends Migration
             $table->timestamp('expires_at')->nullable();
             $table->timestamps();
         });
-        \Illuminate\Support\Facades\Artisan::call('db:seed', [
-            '--class' => 'DatabaseSeeder',
-        ]);
     }
 
     /**

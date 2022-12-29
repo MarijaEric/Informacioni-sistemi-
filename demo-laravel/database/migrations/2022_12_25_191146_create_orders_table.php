@@ -23,9 +23,7 @@ return new class extends Migration
             $table->string("kolicina");
             $table->dateTime("datum_isporuke")->nullable();
         });
-        \Illuminate\Support\Facades\Artisan::call('db:seed', [
-            '--class' => 'DatabaseSeeder',
-        ]);
+
     }
 
     /**

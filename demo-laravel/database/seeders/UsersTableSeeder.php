@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        DB::table('users')->insert([[
             'id' => 1,
             'name' => 'Admin Admin',
             'email' => 'admin@transportsecera.rs',
@@ -22,6 +22,14 @@ class UsersTableSeeder extends Seeder
             'password' => Hash::make('sifra123'),
             'created_at' => now(),
             'updated_at' => now()
-        ]);
+        ],[
+            'id' => 2,
+            'name' => 'Admin Admin',
+            'email' => 'klijent@transportsecera.rs',
+            'email_verified_at' => now(),
+            'password' => Hash::make('sifra123'),
+            'created_at' => now(),
+            'updated_at' => now()
+        ]]);
     }
 }
